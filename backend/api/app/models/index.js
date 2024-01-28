@@ -4,6 +4,7 @@ const Sequelize = require("sequelize");
 const sequelize = new Sequelize(config.DB, config.USER, config.PASSWORD, {
   host: config.HOST,
   dialect: config.dialect,
+  operatorsAliases: false,
   pool: {
     max: config.pool.max,
     min: config.pool.min,
@@ -22,27 +23,25 @@ db.role = require("./role.model.js")(sequelize, Sequelize);
 db.site = require("./site.model.js")(sequelize, Sequelize);
 db.bookmark = require("./bookmark.model.js")(sequelize, Sequelize);
 
-db.role.belongsToMany(db.user, {
-  through: "user_roles",
-  foreignKey: "roleId",
-  otherKey: "userId",
-});
-db.user.belongsTo(db.role, {
-  through: "user_roles",
-  foreignKey: "userId",
-  otherKey: "roleId",
-});
-db.user.hasOne(db.site, {
-  foreignKey: "managerId",
-  as: "site",
-});
-db.site.belongsTo(db.user, {
-  foreignKey: "managerId",
-  as: "manager",
-});
-db.user.belongsToMany(db.site, { through: "bookmark" });
-db.site.belongsToMany(db.user, { through: "bookmark" });
+db.role.hasMany(db.user, { foreignKey: "roleId" });
+db.user.belongsTo(db.role, { foreignKey: "roleId" });
 
-db.ROLES = ["tourist", "manager"];
+db.user.belongsTo(db.site, { foreignKey: "userId", as: "site" });
+db.site.belongsTo(db.user, { foreignKey: "userId", as: "user" });
+
+db.user.belongsToMany(db.site, {
+  through: db.bookmark,
+  foreignKey: "userId",
+  otherKey: "siteId",
+  as: "bookmarkedSites",
+});
+db.site.belongsToMany(db.user, {
+  through: db.bookmark,
+  foreignKey: "siteId",
+  otherKey: "userId",
+  as: "bookmarkedByUsers",
+});
+
+db.ROLES = ["admin", "tourist", "manager"];
 
 module.exports = db;

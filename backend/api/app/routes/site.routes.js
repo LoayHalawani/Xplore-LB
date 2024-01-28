@@ -35,14 +35,4 @@ module.exports = function (app) {
     [authJwt.verifyToken, authJwt.isTourist],
     site.getAllSites
   );
-
-  app.post("/bookmark/add", [authJwt.verifyToken], controller.addBookmark);
-
-  app.delete(
-    "/bookmarks/delete/:id",
-    [authJwt.verifyToken],
-    controller.removeBookmark
-  );
-
-  app.get("/bookmarks/all", [authJwt.verifyToken], controller.listBookmarks);
 };

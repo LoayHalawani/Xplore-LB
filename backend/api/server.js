@@ -19,6 +19,7 @@ app.get("/", (req, res) => {
 
 require("./app/routes/auth.routes")(app);
 require("./app/routes/site.routes")(app);
+require("./app/routes/bookmark.routes")(app);
 
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
@@ -28,18 +29,4 @@ app.listen(PORT, () => {
 const db = require("./app/models");
 const Role = db.role;
 
-/*db.sequelize.sync({ force: true }).then(() => {
-  initial();
-});
-
-function initial() {
-  Role.create({
-    id: 2,
-    name: "tourist",
-  });
-
-  Role.create({
-    id: 3,
-    name: "manager",
-  });
-}*/
+//db.sequelize.sync({ force: true });

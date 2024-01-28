@@ -69,7 +69,7 @@ exports.signin = (req, res) => {
           message: "Invalid Password. Please try again.",
         });
       }
-      const token = jwt.sign({ id: user.id }, config.secret, {
+      const token = jwt.sign({ userId: user.userId }, config.secret, {
         algorithm: "HS256",
         allowInsecureKeySizes: true,
         expiresIn: 86400,
@@ -88,29 +88,10 @@ exports.signin = (req, res) => {
     });
 };
 
-exports.getAccountInfo = (req, res) => {
-  const userId = req.userId;
-
-  User.findByPk(userId, {
-    attributes: {
-      exclude: ["id", "password", "createdAt", "updatedAt", "userId"],
-    },
-  })
-    .then((user) => {
-      if (!user) {
-        return res.status(404).send({ message: "User not found." });
-      }
-      res.status(200).send(user);
-    })
-    .catch((err) => {
-      res.status(500).send({ message: err.message });
-    });
-};
-
 exports.updateAccount = (req, res) => {
   const userId = req.userId;
   User.update(req.body, {
-    where: { id: userId },
+    where: { userId: userId },
   })
     .then((num) => {
       if (num >= 1) {
@@ -128,7 +109,7 @@ exports.deleteAccount = (req, res) => {
   const userId = req.userId;
 
   User.destroy({
-    where: { id: userId },
+    where: { userId: userId },
   })
     .then((num) => {
       if (num === 1) {

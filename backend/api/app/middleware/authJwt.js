@@ -18,8 +18,22 @@ verifyToken = (req, res, next) => {
         message: "Unauthorized.",
       });
     }
-    req.userId = decoded.id;
+    req.userId = decoded.userId;
     next();
+  });
+};
+
+isAdmin = (req, res, next) => {
+  User.findByPk(req.userId).then((user) => {
+    user.getRole().then((role) => {
+      if (role && role.name === "admin") {
+        next();
+      } else {
+        res.status(403).send({
+          message: "Require Admin Role.",
+        });
+      }
+    });
   });
 };
 
@@ -53,6 +67,7 @@ isManager = (req, res, next) => {
 
 const authJwt = {
   verifyToken: verifyToken,
+  isAdmin: isAdmin,
   isTourist: isTourist,
   isManager: isManager,
 };

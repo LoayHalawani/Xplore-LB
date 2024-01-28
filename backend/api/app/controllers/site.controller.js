@@ -5,7 +5,7 @@ exports.getSite = (req, res) => {
   const managerId = req.userId;
   Site.findOne({
     where: {
-      managerId: managerId,
+      userId: managerId,
     },
   })
     .then((site) => {
@@ -25,7 +25,7 @@ exports.addSite = (req, res) => {
   const managerId = req.userId;
   Site.findOne({
     where: {
-      managerId: managerId,
+      userId: managerId,
     },
   })
     .then((existingSite) => {
@@ -35,12 +35,12 @@ exports.addSite = (req, res) => {
           .send({ message: "Sorry, you can only add and manage one site." });
       }
       Site.create({
+        userId: managerId,
         name: req.body.name,
         location: req.body.location,
-        type: req.body.type,
         description: req.body.description,
         image: req.body.image,
-        managerId: managerId,
+        type: req.body.type,
       })
         .then((site) => {
           res.status(201).send({ message: "Site added successfully." });
@@ -57,7 +57,7 @@ exports.addSite = (req, res) => {
 exports.updateSite = (req, res) => {
   const managerId = req.userId;
   Site.update(req.body, {
-    where: { managerId: managerId },
+    where: { userId: managerId },
   })
     .then((num) => {
       if (num >= 1) {
@@ -74,7 +74,7 @@ exports.updateSite = (req, res) => {
 exports.deleteSite = (req, res) => {
   const managerId = req.userId;
   Site.destroy({
-    where: { managerId: managerId },
+    where: { userId: managerId },
   })
     .then((num) => {
       if (num > 0) {
@@ -90,7 +90,9 @@ exports.deleteSite = (req, res) => {
 
 exports.getAllSites = (req, res) => {
   Site.findAll({
-    attributes: { exclude: ["id", "createdAt", "updatedAt", "managerId"] },
+    attributes: {
+      exclude: ["siteId", "userId"],
+    },
   })
     .then((sites) => {
       res.status(200).send(sites);

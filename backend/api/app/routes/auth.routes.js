@@ -19,8 +19,6 @@ module.exports = function (app) {
 
   app.post("/user/signin", controller.signin);
 
-  app.get("/user/check", [authJwt.verifyToken], controller.getAccountInfo);
-
   app.put("/user/update", [authJwt.verifyToken], controller.updateAccount);
 
   app.delete("/user/delete", [authJwt.verifyToken], controller.deleteAccount);

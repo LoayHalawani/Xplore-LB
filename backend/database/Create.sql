@@ -17,6 +17,8 @@ CREATE TABLE users(
   gender ENUM('Male', 'Female') NOT NULL, 
   profileImage VARCHAR(255) NULL, 
   dateOfBirth DATETIME NOT NULL,
+  createdAt DATETIME NOT NULL,
+  updatedAt DATETIME NOT NULL,
   FOREIGN KEY(roleId) REFERENCES roles(roleId) ON DELETE CASCADE
 );
 
