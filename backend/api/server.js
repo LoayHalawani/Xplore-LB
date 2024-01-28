@@ -20,13 +20,9 @@ app.get("/", (req, res) => {
 require("./app/routes/auth.routes")(app);
 require("./app/routes/site.routes")(app);
 require("./app/routes/bookmark.routes")(app);
+require("./app/routes/critique.routes")(app);
 
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
-  console.log(`Server is listening to requests on port ${PORT}.`);
+  console.log(`Server is listening on port ${PORT}.`);
 });
-
-const db = require("./app/models");
-const Role = db.role;
-
-//db.sequelize.sync({ force: true });
