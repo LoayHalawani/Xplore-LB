@@ -8,4 +8,4 @@ This mobile app was developed and tailored for Android devices only.
 
 # Note
 
-This app is incomplete. The full app is still under construction.
+This app is incomplete.
