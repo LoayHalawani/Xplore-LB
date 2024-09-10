@@ -5,7 +5,3 @@ Xplore LB is the ultimate companion for travelers exploring the picturesque land
 # Platform
 
 This mobile app was developed and tailored for Android devices only.
-
-# Note
-
-This app is incomplete.
