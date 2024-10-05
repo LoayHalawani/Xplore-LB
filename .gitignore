@@ -27,7 +27,7 @@ client/ios/.xcode.env.local
 #
 client/build/
 client/.idea
-client/.gradle
+client/android/.gradle
 client/local.properties
 client/*.iml
 client/*.hprof
@@ -66,6 +66,11 @@ client/.metro-health-check*
 # testing
 client/coverage
 
+# other
+client/.bundle
+client/ios
+
 # server
 server/database/.$Database Sketch.drawio.bkp
 server/database/Database Sketch.drawio
+server/api/node_modules
