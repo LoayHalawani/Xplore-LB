@@ -8,7 +8,7 @@ This mobile application is developed using React Native, Express.js, Node.js, an
 
 # Platform
 
-This mobile app was tailored for Android devices only.
+This mobile application was tailored for Android devices only.
 
 # How-to-run
 
