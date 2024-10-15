@@ -4,7 +4,7 @@ Xplore LB is the ultimate companion for travelers exploring the picturesque land
 
 # Technologies
 
-This mobile application was developed using React Native, Express.js, Node.js, and MySQL (migrating to PostgreSQL later).
+This mobile application is developed using React Native, Express.js, Node.js, and MySQL (migrating to PostgreSQL later).
 
 # Platform
 
