@@ -1,13 +1,11 @@
-module.exports = {
-  HOST: "localhost",
-  USER: "root",
-  PASSWORD: "",
-  DB: "xplorelb_db",
-  dialect: "mysql",
-  pool: {
-    max: 5,
-    min: 0,
-    acquire: 30000,
-    idle: 10000,
-  },
-};
+const Pool = require("pg").Pool;
+
+const pool = new Pool({
+  user: "postgres",
+  password: "password",
+  host: "localhost",
+  port: 5432,
+  database: "xplorelb_db",
+});
+
+module.exports = pool;
