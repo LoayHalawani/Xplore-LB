@@ -3241,6 +3241,25 @@
                     }
                 },
                 {
+                    "source": "C:\\Users\\loayh\\Desktop\\Code\\XploreLB\\client\\android\\app\\src\\main\\res\\values\\styles.xml",
+                    "from": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "54",
+                        "endLines": "6",
+                        "endColumns": "12",
+                        "endOffsets": "267"
+                    },
+                    "to": {
+                        "startLines": "2105",
+                        "startColumns": "4",
+                        "startOffsets": "152907",
+                        "endLines": "2108",
+                        "endColumns": "12",
+                        "endOffsets": "153085"
+                    }
+                },
+                {
                     "source": "C:\\Users\\loayh\\.gradle\\caches\\transforms-3\\24934cef6fcb084e51d280dd4587dc43\\transformed\\jetified-activity-1.5.0\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2",
@@ -3408,23 +3427,6 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\loayh\\Desktop\\Code\\XploreLB\\frontend\\android\\app\\src\\main\\res\\values\\strings.xml",
-                    "from": {
-                        "startLines": "1",
-                        "startColumns": "4",
-                        "startOffsets": "16",
-                        "endColumns": "45",
-                        "endOffsets": "57"
-                    },
-                    "to": {
-                        "startLines": "1881",
-                        "startColumns": "4",
-                        "startOffsets": "125692",
-                        "endColumns": "45",
-                        "endOffsets": "125733"
-                    }
-                },
-                {
                     "source": "C:\\Users\\loayh\\.gradle\\caches\\transforms-3\\1d74f8570861ae29793135827590fc1b\\transformed\\recyclerview-1.1.0\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10",
@@ -3458,6 +3460,25 @@
                         "startOffsets": "114819,114888",
                         "endColumns": "68,56",
                         "endOffsets": "114883,114940"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\loayh\\Desktop\\Code\\XploreLB\\client\\node_modules\\@react-native-community\\datetimepicker\\android\\build\\intermediates\\packaged_res\\debug\\values\\values.xml",
+                    "from": {
+                        "startLines": "2,3,6,9,10,13",
+                        "startColumns": "4,4,4,4,4,4",
+                        "startOffsets": "100,181,389,572,653,861",
+                        "endLines": "2,5,8,9,12,15",
+                        "endColumns": "80,12,12,80,12,12",
+                        "endOffsets": "176,384,567,648,856,1039"
+                    },
+                    "to": {
+                        "startLines": "5923,5924,5927,5930,5931,5934",
+                        "startColumns": "4,4,4,4,4,4",
+                        "startOffsets": "417370,417451,417659,417842,417923,418131",
+                        "endLines": "5923,5926,5929,5930,5933,5936",
+                        "endColumns": "80,12,12,80,12,12",
+                        "endOffsets": "417446,417654,417837,417918,418126,418309"
                     }
                 },
                 {
@@ -3531,25 +3552,6 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\loayh\\Desktop\\Code\\XploreLB\\frontend\\node_modules\\@react-native-community\\datetimepicker\\android\\build\\intermediates\\packaged_res\\debug\\values\\values.xml",
-                    "from": {
-                        "startLines": "2,3,6,9,10,13",
-                        "startColumns": "4,4,4,4,4,4",
-                        "startOffsets": "100,181,389,572,653,861",
-                        "endLines": "2,5,8,9,12,15",
-                        "endColumns": "80,12,12,80,12,12",
-                        "endOffsets": "176,384,567,648,856,1039"
-                    },
-                    "to": {
-                        "startLines": "5923,5924,5927,5930,5931,5934",
-                        "startColumns": "4,4,4,4,4,4",
-                        "startOffsets": "417370,417451,417659,417842,417923,418131",
-                        "endLines": "5923,5926,5929,5930,5933,5936",
-                        "endColumns": "80,12,12,80,12,12",
-                        "endOffsets": "417446,417654,417837,417918,418126,418309"
-                    }
-                },
-                {
                     "source": "C:\\Users\\loayh\\.gradle\\caches\\transforms-3\\378d88de2fde0e29d92543d12e33b34a\\transformed\\jetified-viewpager2-1.0.0\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2",
@@ -3607,22 +3609,20 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\loayh\\Desktop\\Code\\XploreLB\\frontend\\android\\app\\src\\main\\res\\values\\styles.xml",
+                    "source": "C:\\Users\\loayh\\Desktop\\Code\\XploreLB\\client\\android\\app\\src\\main\\res\\values\\strings.xml",
                     "from": {
-                        "startLines": "3",
+                        "startLines": "1",
                         "startColumns": "4",
-                        "startOffsets": "54",
-                        "endLines": "6",
-                        "endColumns": "12",
-                        "endOffsets": "267"
+                        "startOffsets": "16",
+                        "endColumns": "45",
+                        "endOffsets": "57"
                     },
                     "to": {
-                        "startLines": "2105",
+                        "startLines": "1881",
                         "startColumns": "4",
-                        "startOffsets": "152907",
-                        "endLines": "2108",
-                        "endColumns": "12",
-                        "endOffsets": "153085"
+                        "startOffsets": "125692",
+                        "endColumns": "45",
+                        "endOffsets": "125733"
                     }
                 },
                 {
@@ -3645,7 +3645,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\loayh\\Desktop\\Code\\XploreLB\\frontend\\android\\app\\build\\generated\\res\\resValues\\debug\\values\\gradleResValues.xml",
+                    "source": "C:\\Users\\loayh\\Desktop\\Code\\XploreLB\\client\\android\\app\\build\\generated\\res\\resValues\\debug\\values\\gradleResValues.xml",
                     "from": {
                         "startLines": "6,8",
                         "startColumns": "4,4",
@@ -5702,7 +5702,7 @@
             "outputFile": "com.xplorelb.app-merged_res-37:/values-night-v8_values-night-v8.arsc.flat",
             "map": [
                 {
-                    "source": "C:\\Users\\loayh\\Desktop\\Code\\XploreLB\\frontend\\node_modules\\@react-native-community\\datetimepicker\\android\\build\\intermediates\\packaged_res\\debug\\values-night-v8\\values-night-v8.xml",
+                    "source": "C:\\Users\\loayh\\Desktop\\Code\\XploreLB\\client\\node_modules\\@react-native-community\\datetimepicker\\android\\build\\intermediates\\packaged_res\\debug\\values-night-v8\\values-night-v8.xml",
                     "from": {
                         "startLines": "2,5",
                         "startColumns": "4,4",
