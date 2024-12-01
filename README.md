@@ -10,4 +10,6 @@ This mobile application is developed using the PERN stack (PostgreSQL, Express.j
 
 To be continued...
 
+# Notes
+
 THIS PROJECT STILL NEEDS ALOT OF WORK OMG
